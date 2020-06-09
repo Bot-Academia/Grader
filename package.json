@@ -2,7 +2,7 @@
   "name": "grader",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "codetheorem <hrishikeshagarwalv@gmail.com>",
+  "author": "Vinayak Sharma <54861487+vinayaksh42@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.15.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
@@ -48,7 +47,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^3.1.11",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
