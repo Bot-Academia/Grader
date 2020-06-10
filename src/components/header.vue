@@ -26,9 +26,9 @@ export default {};
 #header {
   background-color: #228be6;
   font-family: "Comic Neue", cursive;
-  font-size: 2vw;
+  font-size: 20px;
 }
 #navbar-brand {
-  font-size: 3vw;
+  font-size: 20px;
 }
 </style>
