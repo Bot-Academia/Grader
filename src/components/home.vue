@@ -27,7 +27,7 @@
                 v-model.number="course[index].grade"
               />
             </div>
-            <br><br>
+            <br /><br />
             <div class="col col-lg-2">
               <button class="btn btn-primary" @click="remove(index)">
                 - Remove course
@@ -46,8 +46,7 @@
             </button>
             <br /><br />
           </div>
-          <div class="col-sm">
-          </div>
+          <div class="col-sm"></div>
           <div class="col-sm">
             <button
               class="btn btn-primary"
@@ -108,7 +107,7 @@ export default {
       });
     },
     remove(index) {
-      this.course.splice(index,1);
+      this.course.splice(index, 1);
     },
     submit() {
       this.cgpa = 0;
