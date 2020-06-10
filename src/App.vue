@@ -2,6 +2,8 @@
   <div id="app">
     <app-header @namewasreset="selected = $event"></app-header>
     <component :is="selected"></component>
+    <br><br><br>
+    <br><br><br>
     <app-footer></app-footer>
   </div>
 </template>
