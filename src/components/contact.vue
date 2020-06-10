@@ -37,15 +37,17 @@ export default {
   data() {
     return {
       user: {
-        name: "",
-        email: "",
-        message: "",
+        name: null,
+        email: null,
+        message: null,
       },
     };
   },
   methods: {
     submit() {
-      console.log("submit");
+      
+      if(this.user.name!=null && this.user.email!=null && this.user.message!=null){
+        console.log("submit");
       this.$http
         .post("https://grader-ec5f5.firebaseio.com/data.json", this.user)
         .then(
@@ -55,7 +57,9 @@ export default {
           (error) => {
             console.log(error);
           }
-        );
+        );}
+        else
+        console.log("not submitted");
     },
   },
 };
