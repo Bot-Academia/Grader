@@ -58,6 +58,36 @@
               </button>
               <br /><br />
             </div>
+
+            <br /><br />
+            <div class="col col-lg-2">
+              <button class="btn btn-primary" @click="remove(index)">
+                - Remove course
+              </button>
+            </div>
+          </div>
+          <br />
+        </li>
+      </ul>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <button class="btn btn-primary" @click="addCourse">
+              + Add course
+            </button>
+            <br /><br />
+          </div>
+          <div class="col-sm"></div>
+          <div class="col-sm">
+            <button
+              class="btn btn-primary"
+              @click="submit"
+              style="float: right;"
+            >
+              Submit
+            </button>
+            <br /><br />
           </div>
         </div>
       </div>
@@ -113,8 +143,8 @@ export default {
         grade: 0,
       });
     },
-    remove() {
-      this.course.pop();
+    remove(index) {
+      this.course.splice(index, 1);
     },
     submit() {
       this.cgpa = 0;
