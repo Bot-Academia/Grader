@@ -4,11 +4,13 @@
 
     <app-guide id="guide"></app-guide>
     <div class="form">
-      <div class="heading">
-        <h1>
+      <div class="heading row">
+        <h1 class="col-lg-4">😎</h1>
+        <h1 class="col-lg-4">
           Grader <br />
           Know your grades!
         </h1>
+        <h1 class="col-lg-4">💯</h1>
         <hr />
       </div>
 
