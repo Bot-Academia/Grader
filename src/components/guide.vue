@@ -62,14 +62,14 @@ export default {
     color: black;
     font-family: 'Comic Neue', cursive;
     background-color: cornflowerblue;
-    width: 50%;
+    width: 50vw;
     z-index: 1000;
     transition: width 1s ease;
 
 }
 
 .guidetranslate{
-    width: 50%;
+    width: 50vw;
 }
 
 .button-translate{
@@ -77,7 +77,7 @@ export default {
 }
 
 .slide-enter{
-    width: 0%;
+    width: 0vw;
     
 }
 
@@ -90,6 +90,6 @@ export default {
 }
 
 .slide-leave-active{
-    width: 0%;
+    width: 0vw;
 }
 </style>

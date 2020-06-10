@@ -2,6 +2,8 @@
   <div id="app">
     <app-header @namewasreset="selected = $event"></app-header>
     <component :is="selected"></component>
+    <br /><br /><br />
+    <br /><br /><br />
     <app-footer></app-footer>
   </div>
 </template>
@@ -11,7 +13,6 @@ import header from "./components/header.vue";
 import footer from "./components/footer";
 import home from "./components/home";
 import contact from "./components/contact";
-import result from "./components/result";
 
 export default {
   name: "App",
@@ -20,7 +21,6 @@ export default {
     appFooter: footer,
     apphome: home,
     appcontact: contact,
-    appresult: result,
   },
   data() {
     return {
@@ -30,4 +30,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+body {
+  background: #ccffff;
+}
+</style>
