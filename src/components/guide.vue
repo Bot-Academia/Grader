@@ -58,7 +58,7 @@ export default {
   font-family: "Comic Neue", cursive;
   background-color: cornflowerblue;
   width: 50vw;
-  height: 25vh;
+  height: 30vh;
   z-index: 1000;
   transition: width 1s ease;
   overflow: hidden;
