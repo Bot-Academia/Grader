@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
-
-<!--    heading-->
+    <!--    heading-->
 
     <app-guide id="guide"></app-guide>
     <div class="form">
@@ -13,61 +12,62 @@
         <hr />
       </div>
 
-<!--        form-->
+      <!--        form-->
 
       <div class="container">
         <h4>Select your branch</h4>
         <b-form-select v-model="selected" :options="options"></b-form-select>
         <br /><br />
-          <transition-group name="slide" tag="ul">
-            <li v-for="(subject, index) in course" v-bind:key="index">
-              <h6>Subject {{ index + 1 }}</h6>
-              <div class="row">
-                <div class="col">
-                  <b-form-select
-                          v-model="course[index].subject"
-                          :options="options1"
-                  ></b-form-select>
-                </div>
-                <br /><br />
-                <div class="col-md-auto">
-                  <b-form-input
-                          type="number"
-                          v-model.number="course[index].grade"/>
-                </div>
-                <br /><br />
-                <div class="col col-lg-2">
-                  <button class="btn btn-primary" @click="remove(index)">
-                    - Remove course
-                  </button>
-                </div>
+        <transition-group name="slide" tag="ul">
+          <li v-for="(subject, index) in course" v-bind:key="index">
+            <h6>Subject {{ index + 1 }}</h6>
+            <div class="row">
+              <div class="col">
+                <b-form-select
+                  v-model="course[index].subject"
+                  :options="options1"
+                ></b-form-select>
               </div>
-              <br />
-            </li>
-          </transition-group>
+              <br /><br />
+              <div class="col-md-auto">
+                <b-form-input
+                  type="number"
+                  v-model.number="course[index].grade"
+                />
+              </div>
+              <br /><br />
+              <div class="col col-lg-2">
+                <button class="btn btn-primary" @click="remove(index)">
+                  - Remove course
+                </button>
+              </div>
+            </div>
+            <br />
+          </li>
+        </transition-group>
 
-<!--        buttons-->
+        <!--        buttons-->
 
         <div class="container">
           <div class="row">
             <div class="col-sm">
-              <button class="btn btn-primary"
-                      @click="addCourse">
+              <button class="btn btn-primary" @click="addCourse">
                 + Add course
               </button>
               <button
                 class="btn btn-primary"
                 @click="submit"
-                style="float: right;">Submit
+                style="float: right;"
+              >
+                Submit
               </button>
               <br /><br />
             </div>
           </div>
         </div>
-
       </div>
 
-<!--      result-->
+      <!--      result-->
 
       <transition name="fade">
         <div class="container" v-if="result">
@@ -77,13 +77,12 @@
           <b-alert show variant="info" style="text-align: center;">
             <h5>Info</h5>
             <p>
-              "This is only for your own knowledge and has nothing to do with the
-              real Sgpa"
-            </p></b-alert>
+              "This is only for your own knowledge and has nothing to do with
+              the real Sgpa"
+            </p></b-alert
+          >
         </div>
       </transition>
-
-
     </div>
   </div>
 </template>
@@ -160,11 +159,10 @@ h1 {
 
 .slide-enter-active {
   animation: slide-in 1s ease-out forwards;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .slide-leave {
-
 }
 
 .slide-leave-active {
