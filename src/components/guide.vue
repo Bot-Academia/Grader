@@ -39,7 +39,7 @@ export default {
   cursor: pointer;
   padding: 30px 10px 30px 10px;
   position: absolute;
-  background: #2ec4b6;
+  background-color: cornflowerblue;
   transition: 1s ease;
 }
 
