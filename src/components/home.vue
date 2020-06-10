@@ -31,7 +31,7 @@
                   v-model.number="course[index].grade"
                 />
               </div>
-              <br><br>
+              <br /><br />
               <div class="col col-lg-2">
                 <button class="btn btn-primary" @click="remove(index)">
                   - Remove course
@@ -49,9 +49,9 @@
                 + Add course
               </button>
               <button
-                      class="btn btn-primary"
-                      @click="submit"
-                      style="float: right;"
+                class="btn btn-primary"
+                @click="submit"
+                style="float: right;"
               >
                 Submit
               </button>
@@ -112,7 +112,7 @@ export default {
       });
     },
     remove(index) {
-      this.course.splice(index,1);
+      this.course.splice(index, 1);
     },
     submit() {
       this.cgpa = 0;
@@ -141,5 +141,4 @@ h1 {
   text-align: center;
   font-family: "Comic Neue", cursive;
 }
-
 </style>
