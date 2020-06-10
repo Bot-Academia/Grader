@@ -1,5 +1,7 @@
 <template>
   <div class="wrapper">
+    <!--    heading-->
+
     <app-guide id="guide"></app-guide>
     <div class="form">
       <div class="heading">
@@ -9,13 +11,15 @@
         </h1>
         <hr />
       </div>
+
       <!--        form-->
+
       <div class="container">
         <h4>Select your branch</h4>
         <b-form-select v-model="selected" :options="options"></b-form-select>
         <br /><br />
-        <ul>
-          <li v-for="(subject, index) in course" :key="subject.id">
+        <transition-group name="slide" tag="ul">
+          <li v-for="(subject, index) in course" v-bind:key="index">
             <h6>Subject {{ index + 1 }}</h6>
             <div class="row">
               <div class="col">
@@ -40,7 +44,9 @@
             </div>
             <br />
           </li>
-        </ul>
+        </transition-group>
+
+        <!--        buttons-->
 
         <div class="container">
           <div class="row">
@@ -60,18 +66,23 @@
           </div>
         </div>
       </div>
-      <div class="container" v-if="result">
-        <h1>result</h1>
-        <hr />
-        <h1>CGPA: {{ cgpa }}</h1>
-        <b-alert show variant="info" style="text-align: center;">
-          <h5>Info</h5>
-          <p>
-            "This is only for your own knowledge and has nothing to do with the
-            real Sgpa"
-          </p></b-alert
-        >
-      </div>
+
+      <!--      result-->
+
+      <transition name="fade">
+        <div class="container" v-if="result">
+          <h1>result</h1>
+          <hr />
+          <h1>CGPA: {{ cgpa }}</h1>
+          <b-alert show variant="info" style="text-align: center;">
+            <h5>Info</h5>
+            <p>
+              "This is only for your own knowledge and has nothing to do with
+              the real Sgpa"
+            </p></b-alert
+          >
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -140,5 +151,62 @@ h1 {
   font-weight: bold;
   text-align: center;
   font-family: "Comic Neue", cursive;
+}
+.slide-enter {
+  opacity: 0;
+  /*transform: translateY(20px);*/
+}
+
+.slide-enter-active {
+  animation: slide-in 1s ease-out forwards;
+  transition: opacity 0.5s;
+}
+
+.slide-leave {
+}
+
+.slide-leave-active {
+  animation: slide-out 1s ease-out forwards;
+  transition: opacity 1s;
+  opacity: 0;
+  position: absolute;
+}
+
+.slide-move {
+  transition: transform 1s;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 1s;
+}
+
+.fade-leave {
+  /*opacity: 1;*/
+}
+
+.fade-leave-active {
+  transition: opacity 1s;
+  opacity: 0;
 }
 </style>
