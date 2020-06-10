@@ -62,6 +62,10 @@
       <h1>result</h1>
       <hr />
       <h1>CGPA: {{ cgpa }}</h1>
+      <b-alert show variant="info" style="text-align: center">
+        <h5>Info</h5>
+        <p>"This is only for your own knowledge
+          and has nothing to do with the real Sgpa"</p></b-alert>
     </div>
   </div>
 </template>
