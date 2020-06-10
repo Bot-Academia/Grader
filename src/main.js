@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import VueResource from 'vue-resource';
+import VueResource from "vue-resource";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
 // Install BootstrapVue
