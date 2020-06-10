@@ -134,11 +134,11 @@ export default {
 }
 
 .form {
-  position: fixed;
+  position: absolute;
 }
 
 .container {
-  position: fixed;
+  position: absolute;
 }
 
 ul {
@@ -154,11 +154,11 @@ h1 {
 
 @media (min-width: 471px) {
   .heading {
-    margin-left: 25vw;
+    margin-left: 10vw;
   }
 
   .form {
-    margin-left: 10vw;
+    margin-left: 25vw;
   }
 }
 </style>
