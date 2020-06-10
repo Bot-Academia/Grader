@@ -2,8 +2,8 @@
   <div id="app">
     <app-header @namewasreset="selected = $event"></app-header>
     <component :is="selected"></component>
-    <br><br><br>
-    <br><br><br>
+    <br /><br /><br />
+    <br /><br /><br />
     <app-footer></app-footer>
   </div>
 </template>
@@ -20,18 +20,18 @@ export default {
     appHeader: header,
     appFooter: footer,
     apphome: home,
-    appcontact: contact
+    appcontact: contact,
   },
   data() {
     return {
-      selected: 'apphome'
+      selected: "apphome",
     };
-  }
+  },
 };
 </script>
 
 <style>
-  body{
-    background: #ccffff;
-  }
+body {
+  background: #ccffff;
+}
 </style>
