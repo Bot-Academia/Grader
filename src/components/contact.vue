@@ -1,15 +1,13 @@
 <template>
-    <div>
-        <p>Contact</p>
-    </div>
+  <div>
+    <p>Contact</p>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "contact"
-    }
+export default {
+  name: "contact",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

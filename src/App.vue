@@ -20,13 +20,13 @@ export default {
     appFooter: footer,
     apphome: home,
     appcontact: contact,
-    appresult: result
+    appresult: result,
   },
   data() {
     return {
-      selected: 'apphome'
+      selected: "apphome",
     };
-  }
+  },
 };
 </script>
 

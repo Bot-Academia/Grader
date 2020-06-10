@@ -1,7 +1,9 @@
 <template>
   <div id="header">
     <b-navbar toggleable="lg" type="dark">
-      <b-navbar-brand href="#" id="navbar-brand" @click="change1('apphome')">Home</b-navbar-brand>
+      <b-navbar-brand href="#" id="navbar-brand" @click="change1('apphome')"
+        >Home</b-navbar-brand
+      >
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -10,7 +12,9 @@
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
             <b-nav-item href="#">About Us</b-nav-item>
-            <b-nav-item href="#" @click="change2('appcontact')">Contact Us</b-nav-item>
+            <b-nav-item href="#" @click="change2('appcontact')"
+              >Contact Us</b-nav-item
+            >
           </b-navbar-nav>
         </b-navbar-nav>
       </b-collapse>
@@ -26,8 +30,8 @@ export default {
     },
     change2(item) {
       this.$emit("namewasreset", item);
-    }
-  }
+    },
+  },
 };
 </script>
 
