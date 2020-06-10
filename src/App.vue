@@ -11,7 +11,6 @@ import header from "./components/header.vue";
 import footer from "./components/footer";
 import home from "./components/home";
 import contact from "./components/contact";
-import result from "./components/result";
 
 export default {
   name: "App",
@@ -20,7 +19,6 @@ export default {
     appFooter: footer,
     apphome: home,
     appcontact: contact,
-    appresult: result,
   },
   data() {
     return {
@@ -30,4 +28,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+body {
+  background: #ccffff;
+}
+</style>
