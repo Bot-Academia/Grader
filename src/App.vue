@@ -18,7 +18,7 @@ export default {
     appHeader: header,
     appFooter: footer,
     apphome: home,
-    appcontact: contact
+    appcontact: contact,
   },
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-  body{
-    background: #ccffff;
-  }
+body {
+  background: #ccffff;
+}
 </style>
