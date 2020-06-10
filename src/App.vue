@@ -10,7 +10,7 @@
 
 <script>
 import header from "./components/header.vue";
-import footer from "./components/footer";
+import appfooter from "./components/appfooter";
 import home from "./components/home";
 import contact from "./components/contact";
 
@@ -18,7 +18,7 @@ export default {
   name: "App",
   components: {
     appHeader: header,
-    appFooter: footer,
+    appFooter: appfooter,
     apphome: home,
     appcontact: contact,
   },
