@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <app-guide id="guide"></app-guide>
     <div class="form">
       <div class="heading">
         <h1>
@@ -74,7 +75,6 @@
         >
       </div>
     </div>
-    <app-guide id="guide"></app-guide>
   </div>
 </template>
 
@@ -130,14 +130,6 @@ export default {
 <style scoped>
 #guide {
   z-index: 1000;
-  position: relative;
-}
-
-.form {
-  position: absolute;
-}
-
-.container {
   position: absolute;
 }
 
@@ -152,13 +144,4 @@ h1 {
   font-family: "Comic Neue", cursive;
 }
 
-@media (min-width: 471px) {
-  .heading {
-    margin-left: 10vw;
-  }
-
-  .form {
-    margin-left: 25vw;
-  }
-}
 </style>
