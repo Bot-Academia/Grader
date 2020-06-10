@@ -19,7 +19,7 @@
         <b-form-select v-model="selected" :options="options"></b-form-select>
         <br /><br />
         <transition-group name="slide" tag="ul">
-          <li v-for="(subject, index) in course" v-bind:key="index">
+          <li v-for="(subject, index) in course" v-bind:key="subject">
             <h6>Subject {{ index + 1 }}</h6>
             <div class="row">
               <div class="col">
