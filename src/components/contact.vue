@@ -45,21 +45,23 @@ export default {
   },
   methods: {
     submit() {
-      
-      if(this.user.name!=null && this.user.email!=null && this.user.message!=null){
+      if (
+        this.user.name != null &&
+        this.user.email != null &&
+        this.user.message != null
+      ) {
         console.log("submit");
-      this.$http
-        .post("https://grader-ec5f5.firebaseio.com/data.json", this.user)
-        .then(
-          (response) => {
-            console.log(response);
-          },
-          (error) => {
-            console.log(error);
-          }
-        );}
-        else
-        console.log("not submitted");
+        this.$http
+          .post("https://grader-ec5f5.firebaseio.com/data.json", this.user)
+          .then(
+            (response) => {
+              console.log(response);
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+      } else console.log("not submitted");
     },
   },
 };

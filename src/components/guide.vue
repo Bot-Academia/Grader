@@ -42,7 +42,7 @@ export default {
   background-color: cornflowerblue;
   transition: 1s ease;
   margin-left: 0px;
-  box-shadow: 10px 10px 54px -6px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
 }
 
 .left {
@@ -64,14 +64,12 @@ export default {
   overflow: hidden;
   position: absolute;
   border-radius: 0 20px 20px 0;
-   box-shadow: 10px 10px 54px -6px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
 }
 
 .guidetranslate {
   width: 50vw;
 }
-
-
 
 .button-translate {
   transform: translateX(50vw);
@@ -93,33 +91,32 @@ export default {
   width: 0vw;
 }
 
-@media (max-width: 1486px){
-  .guide{
+@media (max-width: 1486px) {
+  .guide {
     height: 50vh;
   }
 }
 
-@media (max-width:1120px){
-  .guide{
+@media (max-width: 1120px) {
+  .guide {
     height: 40vh;
   }
 }
 
-
-@media (max-width:772px){
-  .guide{
+@media (max-width: 772px) {
+  .guide {
     height: 50vh;
   }
 }
 
-@media (max-width: 680px){
-  .guide{
+@media (max-width: 680px) {
+  .guide {
     height: 60vh;
   }
 }
 
-@media (max-width: 485px){
-  .guide{
+@media (max-width: 485px) {
+  .guide {
     height: 60vh;
   }
 }
