@@ -2,7 +2,7 @@
 
     <div id=header>
   <b-navbar toggleable="lg" type="dark">
-    <b-navbar-brand href="#">Home</b-navbar-brand>
+    <b-navbar-brand href="#" id="navbar-brand">Home</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -31,6 +31,9 @@ export default {};
     background-color: #228be6;
     font-family: 'Comic Neue', cursive;
     font-size: 2vw;
+}
+#navbar-brand{
+    font-size: 3vw;
 }
 </style>
 
