@@ -1,4 +1,5 @@
 <template>
+
     <div id=header>
   <b-navbar toggleable="lg" type="dark">
     <b-navbar-brand href="#">Home</b-navbar-brand>
@@ -16,13 +17,13 @@
     </b-collapse>
   </b-navbar>
 </div>
+
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
+
 
 
 <style scoped>
@@ -32,3 +33,4 @@ export default {
     font-size: 2vw;
 }
 </style>
+

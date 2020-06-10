@@ -30,4 +30,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # WireFrame
 
-![grader wireframe](https://user-images.githubusercontent.com/54861487/84236237-f832dd00-ab14-11ea-83e6-623e20b90c7e.png)
+![gw](https://user-images.githubusercontent.com/54861487/84241815-a2aefe00-ab1d-11ea-8db8-d28fee19a986.png)

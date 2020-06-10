@@ -10,7 +10,7 @@ import header from "./components/header.vue";
 export default {
   name: "App",
   components: {
-    appHeader: header
+    appHeader: header,
   },
 };
 </script>
