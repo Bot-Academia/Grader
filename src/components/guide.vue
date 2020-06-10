@@ -9,7 +9,7 @@
         <p>Select your branch</p>
         <h4>Step 2:</h4>
         <p>Add your courses with the respective grade points</p>
-        <h3>Now you are ready to hit submit!</h3>
+        <h3>Now you are ready to hit submit!😊</h3>
       </div>
     </transition>
   </div>
@@ -41,6 +41,8 @@ export default {
   position: absolute;
   background-color: cornflowerblue;
   transition: 1s ease;
+  margin-left: 0px;
+  box-shadow: 10px 10px 54px -6px rgba(0,0,0,0.75);
 }
 
 .left {
@@ -56,13 +58,20 @@ export default {
   font-family: "Comic Neue", cursive;
   background-color: cornflowerblue;
   width: 50vw;
+  height: 25vh;
   z-index: 1000;
   transition: width 1s ease;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 0 20px 20px 0;
+   box-shadow: 10px 10px 54px -6px rgba(0,0,0,0.75);
 }
 
 .guidetranslate {
   width: 50vw;
 }
+
+
 
 .button-translate {
   transform: translateX(50vw);
@@ -82,5 +91,36 @@ export default {
 
 .slide-leave-active {
   width: 0vw;
+}
+
+@media (max-width: 1486px){
+  .guide{
+    height: 50vh;
+  }
+}
+
+@media (max-width:1120px){
+  .guide{
+    height: 40vh;
+  }
+}
+
+
+@media (max-width:772px){
+  .guide{
+    height: 50vh;
+  }
+}
+
+@media (max-width: 680px){
+  .guide{
+    height: 60vh;
+  }
+}
+
+@media (max-width: 485px){
+  .guide{
+    height: 60vh;
+  }
 }
 </style>
