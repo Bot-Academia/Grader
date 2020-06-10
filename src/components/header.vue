@@ -1,5 +1,6 @@
 <template>
 
+
     <div id=header>
   <b-navbar toggleable="lg" type="dark">
     <b-navbar-brand href="#" id="navbar-brand">Home</b-navbar-brand>
@@ -18,22 +19,20 @@
   </b-navbar>
 </div>
 
+
 </template>
 
 <script>
 export default {};
 </script>
 
-
-
 <style scoped>
-#header{
-    background-color: #228be6;
-    font-family: 'Comic Neue', cursive;
-    font-size: 2vw;
+#header {
+  background-color: #228be6;
+  font-family: "Comic Neue", cursive;
+  font-size: 2vw;
 }
 #navbar-brand{
     font-size: 3vw;
 }
 </style>
-
