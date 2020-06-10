@@ -108,7 +108,7 @@ input[type="submit"] {
 }
 
 .container {
-  width: 460px;
+  width: 70%;
   margin: 5em auto;
 }
 form {
