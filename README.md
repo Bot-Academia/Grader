@@ -29,4 +29,5 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 # WireFrame
+
 ![grader wireframe](https://user-images.githubusercontent.com/54861487/84236237-f832dd00-ab14-11ea-83e6-623e20b90c7e.png)
