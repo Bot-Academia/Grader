@@ -1,14 +1,9 @@
 <template>
-    <h1>Header</h1>
+  <h1>Header</h1>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
