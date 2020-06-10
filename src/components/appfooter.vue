@@ -1,5 +1,5 @@
 <template>
-  <div class="footer" id="footer">
+  <div class="footer" id="footers">
     <a href="https://github.com/codetheorem/Grader" id="logo"
       ><i class="fa fa-github" aria-hidden="true"></i
     ></a>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "appfooter",
 };
 </script>
 
