@@ -3,7 +3,6 @@
     <app-header></app-header>
     <app-footer></app-footer>
   </div>
-
 </template>
 
 <script>
@@ -14,7 +13,7 @@ export default {
   name: "App",
   components: {
     appHeader: header,
-    appFooter: footer
+    appFooter: footer,
   },
 };
 </script>
