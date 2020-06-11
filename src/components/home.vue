@@ -18,20 +18,26 @@
 
       <div class="container">
         <h4>Select your branch</h4>
-        <b-form-select v-model="selected" :options="options" :key="selected"></b-form-select>
+        <b-form-select
+          v-model="selected"
+          :options="options"
+          :key="selected"
+        ></b-form-select>
         <br /><br />
         <transition-group name="slide" tag="ul">
           <li v-for="(subject, index) in course" v-bind:key="subject">
             <h6>Subject {{ index + 1 }}</h6>
             <div class="row">
               <div class="col">
-                <b-form-select v-if="selected == 'options1'"
+                <b-form-select
+                  v-if="selected == 'options1'"
                   v-model="course[index].credit"
                   :options="options1"
                 ></b-form-select>
-                <b-form-select  v-else
-                        v-model="course[index].credit"
-                        :options="options2"
+                <b-form-select
+                  v-else
+                  v-model="course[index].credit"
+                  :options="options2"
                 ></b-form-select>
               </div>
               <br /><br />
@@ -108,7 +114,7 @@ export default {
       options: [
         { value: null, text: "Please select an option" },
         { value: "options1", text: "CSE" },
-        { value: "options2", text: "ECE" }
+        { value: "options2", text: "ECE" },
       ],
       course: [],
       options1: [
