@@ -4,7 +4,7 @@
 
     <app-guide id="guide"></app-guide>
     <div class="form">
-      <div class="heading row">
+      <div class=" heading row m-0">
         <h1 class="col-lg-4">😎</h1>
         <h1 class="col-lg-4">
           Grader <br />
@@ -147,8 +147,16 @@ export default {
 ul {
   list-style-type: none;
 }
+
+
+.heading h1{
+  overflow: hidden;
+}
+
 h1 {
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
   font-size: 50px;
   font-weight: bold;
   text-align: center;
@@ -164,8 +172,6 @@ h1 {
   transition: opacity 0.5s;
 }
 
-.slide-leave {
-}
 
 .slide-leave-active {
   animation: slide-out 1s ease-out forwards;
@@ -203,12 +209,10 @@ h1 {
   transition: opacity 1s;
 }
 
-.fade-leave {
-  /*opacity: 1;*/
-}
 
 .fade-leave-active {
   transition: opacity 1s;
   opacity: 0;
 }
+
 </style>
