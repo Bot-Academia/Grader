@@ -24,12 +24,18 @@
           <textarea rows="4" cols="50" v-model="user.message"></textarea>
         </li>
         <li>
-          <button class="btn btn-primary" @click.prevent="submit">Submit</button>
+          <button class="btn btn-primary" @click.prevent="submit">
+            Submit
+          </button>
         </li>
       </ul>
     </form>
-    <div class="alert alert-warning" v-if="notsubmitted">Response not submitted</div>
-    <div class="alert alert-success" v-if="submitted">Response successfully submitted</div>
+    <div class="alert alert-warning" v-if="notsubmitted">
+      Response not submitted
+    </div>
+    <div class="alert alert-success" v-if="submitted">
+      Response successfully submitted
+    </div>
   </div>
 </template>
 
@@ -44,7 +50,7 @@ export default {
         message: null,
       },
       notsubmitted: false,
-      submitted: false
+      submitted: false,
     };
   },
   methods: {
@@ -53,8 +59,9 @@ export default {
         this.user.name != null &&
         this.user.email != null &&
         this.user.message != null
-      ) { this.submitted=true;
-          this.notsubmitted=false;
+      ) {
+        this.submitted = true;
+        this.notsubmitted = false;
         console.log("submit");
         this.$http
           .post("https://grader-ec5f5.firebaseio.com/data.json", this.user)
@@ -66,12 +73,14 @@ export default {
               console.log(error);
             }
           );
-          this.user.email=null;
-          this.user.name=null;
-          this.user.message=null;
-      } else { this.submitted=false;
-               this.notsubmitted=true;
-        console.log("not submitted");}
+        this.user.email = null;
+        this.user.name = null;
+        this.user.message = null;
+      } else {
+        this.submitted = false;
+        this.notsubmitted = true;
+        console.log("not submitted");
+      }
     },
   },
 };
