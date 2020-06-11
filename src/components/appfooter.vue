@@ -27,12 +27,12 @@ a {
   font-family: "Comic Neue", cursive;
   font-size: large;
   position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
   background-color: #228be6;
   color: white;
   text-align: center;
+  margin-bottom: 0;
 }
 p {
   font-size: larger;

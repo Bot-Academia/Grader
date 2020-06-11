@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-header @namewasreset="selected = $event"></app-header>
-    <component :is="selected"></component>
+    <component :is="selected" class="sitecontent"></component>
     <br /><br /><br />
     <br /><br /><br />
     <app-footer></app-footer>
@@ -33,5 +33,8 @@ export default {
 <style>
 body {
   background: #ccffff;
+}
+.sitecontent{
+  flex: 1;
 }
 </style>
