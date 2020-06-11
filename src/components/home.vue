@@ -30,7 +30,7 @@
             <div class="row">
               <div class="col">
                 <b-form-select
-                  v-if="selected == 'options1'"
+                  v-if="selected == 'courses.options1'"
                   v-model="course[index].credit"
                   :options="options1"
                 ></b-form-select>
@@ -101,11 +101,13 @@
 
 <script>
 import guide from "./guide.vue";
+import {courses} from "../courses.js"
 export default {
   name: "home",
   components: {
     appGuide: guide,
   },
+  mixins: [courses],
   data() {
     return {
       cgpa: 0,
@@ -117,19 +119,7 @@ export default {
         { value: "options1", text: "CSE" },
         { value: "options2", text: "ECE" },
       ],
-      course: [],
-      options1: [
-        { value: null, text: "Please select an option" },
-        { value: 2, text: "ENG-MATHS 1" },
-        { value: 3, text: "c programming" },
-        { value: 4, text: "python" },
-      ],
-      options2: [
-        { value: null, text: "Please select an option" },
-        { value: 2, text: "electronics" },
-        { value: 3, text: "BE" },
-        { value: 4, text: "python" },
-      ],
+      course: []
     };
   },
   methods: {
