@@ -47,7 +47,8 @@
                 <b-form-input
                   type="number"
                   v-model="course[index].grade"
-                  min="0" max="10"
+                  min="0"
+                  max="10"
                 />
               </div>
               <br /><br />
@@ -99,12 +100,12 @@
         </div>
       </transition>
 
-<!--      false msg-->
+      <!--      false msg-->
 
       <transition name="fade">
         <div class="container" v-if="flag">
           <b-alert show variant="info" style="text-align: center;">
-              <h4>{{ msg }}</h4>
+            <h4>{{ msg }}</h4>
           </b-alert>
         </div>
       </transition>
@@ -156,11 +157,11 @@ export default {
       }
       this.cgpa /= this.count;
 
-      if(this.cgpa>10){
-        this.flag=true;
+      if (this.cgpa > 10) {
+        this.flag = true;
         this.result = false;
-      }else{
-        this.flag=false;
+      } else {
+        this.flag = false;
         this.result = true;
       }
     },
