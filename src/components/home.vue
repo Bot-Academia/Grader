@@ -151,10 +151,22 @@ export default {
     submit() {
       this.cgpa = 0;
       this.count = 0;
-      for (let key in this.course) {
-        this.cgpa += this.course[key].grade * this.course[key].credit;
-        this.count += this.course[key].credit;
+      if (this.selected == "options1") {
+        for (let key in this.course) {
+          this.cgpa +=
+            this.course[key].grade *
+            this.options1[this.course[key].credit].credit;
+          this.count += this.options1[this.course[key].credit].credit;
+        }
+      } else {
+        for (let key in this.course) {
+          this.cgpa +=
+            this.course[key].grade *
+            this.options2[this.course[key].credit].credit;
+          this.count += this.options2[this.course[key].credit].credit;
+        }
       }
+
       this.cgpa /= this.count;
 
       if (this.cgpa > 10) {
