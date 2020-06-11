@@ -2,7 +2,7 @@
   <div id="header">
     <b-navbar toggleable="lg" type="dark">
       <b-navbar-brand href="#" id="navbar-brand" @click="change1('apphome')"
-        >Home</b-navbar-brand
+        >Grader</b-navbar-brand
       >
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
