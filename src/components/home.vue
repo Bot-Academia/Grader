@@ -101,7 +101,7 @@
 
 <script>
 import guide from "./guide.vue";
-import {courses} from "../courses.js"
+import { courses } from "../courses.js";
 export default {
   name: "home",
   components: {
@@ -119,7 +119,7 @@ export default {
         { value: "options1", text: "CSE" },
         { value: "options2", text: "ECE" },
       ],
-      course: []
+      course: [],
     };
   },
   methods: {
