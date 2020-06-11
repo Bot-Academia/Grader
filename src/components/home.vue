@@ -109,6 +109,7 @@ export default {
   data() {
     return {
       cgpa: 0,
+      count: 0,
       result: false,
       selected: null,
       options: [
@@ -143,9 +144,12 @@ export default {
     },
     submit() {
       this.cgpa = 0;
+      this.count = 0;
       for (let key in this.course) {
-        this.cgpa += this.course[key].grade;
+        this.cgpa += this.course[key].grade * this.course[key].credit;
+        this.count += this.course[key].credit;
       }
+      this.cgpa /= this.count;
       this.result = !this.result;
     },
   },
