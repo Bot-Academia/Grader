@@ -63,16 +63,18 @@ export default {
         this.submitted = true;
         this.notsubmitted = false;
         console.log("submit");
-        this.$http
-          .post("https://grader-ec5f5.firebaseio.com/data.json", this.user)
-          // .then(
-          //   (response) => {
-          //     console.log(response);
-          //   },
-          //   (error) => {
-          //     console.log(error);
-          //   }
-          // );
+        this.$http.post(
+          "https://grader-ec5f5.firebaseio.com/data.json",
+          this.user
+        );
+        // .then(
+        //   (response) => {
+        //     console.log(response);
+        //   },
+        //   (error) => {
+        //     console.log(error);
+        //   }
+        // );
         this.user.email = null;
         this.user.name = null;
         this.user.message = null;
