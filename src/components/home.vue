@@ -30,7 +30,7 @@
             <div class="row">
               <div class="col">
                 <b-form-select
-                  v-if="selected == 'courses.options1'"
+                  v-if="selected == 'options1'"
                   v-model="course[index].credit"
                   :options="options1"
                 ></b-form-select>
