@@ -34,7 +34,7 @@ export default {
 body {
   background: #ccffff;
 }
-.sitecontent{
+.sitecontent {
   flex: 1;
 }
 </style>

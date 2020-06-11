@@ -1,5 +1,7 @@
-export const courses={
-    options1: [
+export const courses = {
+  data() {
+    return {
+      options1: [
         { value: null, text: "Please select an option" },
         { value: 2, text: "ENG-MATHS 1" },
         { value: 3, text: "c programming" },
@@ -10,5 +12,7 @@ export const courses={
         { value: 2, text: "electronics" },
         { value: 3, text: "BE" },
         { value: 4, text: "python" },
-      ]
+      ],
+    };
+  },
 };
