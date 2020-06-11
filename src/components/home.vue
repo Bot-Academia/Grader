@@ -18,16 +18,20 @@
 
       <div class="container">
         <h4>Select your branch</h4>
-        <b-form-select v-model="selected" :options="options"></b-form-select>
+        <b-form-select v-model="selected" :options="options" :key="selected"></b-form-select>
         <br /><br />
         <transition-group name="slide" tag="ul">
           <li v-for="(subject, index) in course" v-bind:key="subject">
             <h6>Subject {{ index + 1 }}</h6>
             <div class="row">
               <div class="col">
-                <b-form-select
-                  v-model="course[index].subject"
+                <b-form-select v-if="selected == 'options1'"
+                  v-model="course[index].credit"
                   :options="options1"
+                ></b-form-select>
+                <b-form-select  v-else
+                        v-model="course[index].credit"
+                        :options="options2"
                 ></b-form-select>
               </div>
               <br /><br />
@@ -103,24 +107,28 @@ export default {
       selected: null,
       options: [
         { value: null, text: "Please select an option" },
-        { value: "Computer Science Eng", text: "CSE" },
-        { value: "Electronics and Communication Eng", text: "ECE" },
-        { value: "Electrical Eng", text: "EE" },
+        { value: "options1", text: "CSE" },
+        { value: "options2", text: "ECE" }
       ],
       course: [],
-      selected1: null,
       options1: [
         { value: null, text: "Please select an option" },
-        { value: "maths", text: "ENG-MATHS 1" },
-        { value: "c", text: "c programming" },
-        { value: "python", text: "python" },
+        { value: 2, text: "ENG-MATHS 1" },
+        { value: 3, text: "c programming" },
+        { value: 4, text: "python" },
+      ],
+      options2: [
+        { value: null, text: "Please select an option" },
+        { value: 2, text: "electronics" },
+        { value: 3, text: "BE" },
+        { value: 4, text: "python" },
       ],
     };
   },
   methods: {
     addCourse() {
       this.course.push({
-        subject: "",
+        credit: 0,
         grade: 0,
       });
     },
