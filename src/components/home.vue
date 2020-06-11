@@ -147,9 +147,9 @@ export default {
       this.count = 0;
       for (let key in this.course) {
         this.cgpa += this.course[key].grade * this.course[key].credit;
-        this.count+=this.course[key].credit;
+        this.count += this.course[key].credit;
       }
-      this.cgpa/=this.count;
+      this.cgpa /= this.count;
       this.result = !this.result;
     },
   },
