@@ -26,7 +26,7 @@
         ></b-form-select>
         <br /><br />
         <transition-group name="slide" tag="ul">
-          <li v-for="(subject, index) in course" v-bind:key="subject">
+          <li v-for="(subject, index) in course" v-bind:key="String(subject)">
             <h6>Subject {{ index + 1 }}</h6>
             <div class="row">
               <div class="col">
