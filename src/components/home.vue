@@ -133,16 +133,16 @@ export default {
     };
   },
   methods: {
-     addArray() {
-       this.optionsArray=[];
-for (let key in this.courseval) {
-  if(this.selected===key){
-    this.courseval[key].forEach(element => {
-      this.optionsArray.push(element);
-    });
-  }
-}           
-},
+    addArray() {
+      this.optionsArray = [];
+      for (let key in this.courseval) {
+        if (this.selected === key) {
+          this.courseval[key].forEach((element) => {
+            this.optionsArray.push(element);
+          });
+        }
+      }
+    },
     addCourse() {
       this.course.push({
         credit: null,
@@ -155,22 +155,12 @@ for (let key in this.courseval) {
     submit() {
       this.cgpa = 0;
       this.count = 0;
-      if (this.selected == "options1") {
-        for (let key in this.course) {
-          this.cgpa +=
-            this.course[key].grade *
-            this.courseval.options1[this.course[key].credit].credit;
-          this.count += this.courseval.options1[this.course[key].credit].credit;
-        }
-      } else {
-        for (let key in this.course) {
-          this.cgpa +=
-            this.course[key].grade *
-            this.courseval.options2[this.course[key].credit].credit;
-          this.count += this.courseval.options2[this.course[key].credit].credit;
-        }
+      for (let key in this.course) {
+        this.cgpa +=
+          this.course[key].grade *
+          this.optionsArray[this.course[key].credit].credit;
+        this.count += this.optionsArray[this.course[key].credit].credit;
       }
-
       this.cgpa /= this.count;
 
       if (this.cgpa > 10) {
