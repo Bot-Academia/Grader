@@ -33,10 +33,12 @@
                   v-if="selected == 'options1'"
                   v-model="course[index].credit"
                   :options="options1"
+                  v-bind:value="options1.credit"
                 ></b-form-select>
                 <b-form-select
                   v-else
                   v-model="course[index].credit"
+                  v-bind:value="options2.credit"
                   :options="options2"
                 ></b-form-select>
               </div>
@@ -44,7 +46,9 @@
               <div class="col-md-auto">
                 <b-form-input
                   type="number"
-                  v-model.number="course[index].grade"
+                  v-model="course[index].grade"
+                  min="0"
+                  max="10"
                 />
               </div>
               <br /><br />
@@ -95,6 +99,16 @@
           >
         </div>
       </transition>
+
+      <!--      false msg-->
+
+      <transition name="fade">
+        <div class="container" v-if="flag">
+          <b-alert show variant="info" style="text-align: center;">
+            <h4>{{ msg }}</h4>
+          </b-alert>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -110,10 +124,12 @@ export default {
   mixins: [courses],
   data() {
     return {
+      msg: "Please enter the grade point between 0-10",
       cgpa: 0,
       count: 0,
       result: false,
       selected: null,
+      flag: false,
       options: [
         { value: null, text: "Please select an option" },
         { value: "options1", text: "CSE" },
@@ -125,7 +141,7 @@ export default {
   methods: {
     addCourse() {
       this.course.push({
-        credit: 0,
+        credit: null,
         grade: 0,
       });
     },
@@ -140,7 +156,14 @@ export default {
         this.count += this.course[key].credit;
       }
       this.cgpa /= this.count;
-      this.result = !this.result;
+
+      if (this.cgpa > 10) {
+        this.flag = true;
+        this.result = false;
+      } else {
+        this.flag = false;
+        this.result = true;
+      }
     },
   },
 };
