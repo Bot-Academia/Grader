@@ -14,7 +14,7 @@
         <hr />
       </div>
 
-      <!--        form-->
+      <!--form-->
 
       <div class="container">
         <h4>Select your branch</h4>
@@ -34,12 +34,6 @@
                   v-model="course[index].credit"
                   :options="optionsArray"
                 ></b-form-select>
-                <!-- <b-form-select
-                  v-else
-                  v-model="course[index].credit"
-                  v-bind:value="options2.credit"
-                  :options="options2"
-                ></b-form-select> -->
               </div>
               <br /><br />
               <div class="col-md-auto">
