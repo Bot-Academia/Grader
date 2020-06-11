@@ -22,6 +22,7 @@
           v-model="selected"
           :options="options"
           :key="selected"
+          @input="addArray"
         ></b-form-select>
         <br /><br />
         <transition-group name="slide" tag="ul">
@@ -30,17 +31,15 @@
             <div class="row">
               <div class="col">
                 <b-form-select
-                  v-if="selected == 'options1'"
                   v-model="course[index].credit"
-                  :options="options1"
-                  v-bind:value="options1.credit"
+                  :options="optionsArray"
                 ></b-form-select>
-                <b-form-select
+                <!-- <b-form-select
                   v-else
                   v-model="course[index].credit"
                   v-bind:value="options2.credit"
                   :options="options2"
-                ></b-form-select>
+                ></b-form-select> -->
               </div>
               <br /><br />
               <div class="col-md-auto">
@@ -129,6 +128,7 @@ export default {
       count: 0,
       result: false,
       selected: null,
+      optionsArray: [],
       flag: false,
       options: [
         { value: null, text: "Please select an option" },
@@ -139,6 +139,16 @@ export default {
     };
   },
   methods: {
+     addArray() {
+       this.optionsArray=[];
+for (let key in this.courseval) {
+  if(this.selected===key){
+    this.courseval[key].forEach(element => {
+      this.optionsArray.push(element);
+    });
+  }
+}           
+},
     addCourse() {
       this.course.push({
         credit: null,
@@ -155,15 +165,15 @@ export default {
         for (let key in this.course) {
           this.cgpa +=
             this.course[key].grade *
-            this.options1[this.course[key].credit].credit;
-          this.count += this.options1[this.course[key].credit].credit;
+            this.courseval.options1[this.course[key].credit].credit;
+          this.count += this.courseval.options1[this.course[key].credit].credit;
         }
       } else {
         for (let key in this.course) {
           this.cgpa +=
             this.course[key].grade *
-            this.options2[this.course[key].credit].credit;
-          this.count += this.options2[this.course[key].credit].credit;
+            this.courseval.options2[this.course[key].credit].credit;
+          this.count += this.courseval.options2[this.course[key].credit].credit;
         }
       }
 

@@ -1,6 +1,6 @@
 export const courses = {
   data() {
-    return {
+    return {  courseval:{
       options1: [
         { credit: null, value: null, text: "Please select an option" },
         { credit: 3, value: 1, text: "ENG-MATHS 1" },
@@ -35,7 +35,7 @@ export const courses = {
         { credit: 4, value: 13, text: "Network Analysis and Synthesis" },
         { credit: 3, value: 14, text: "Discourse of human values" },
         { credit: 1, value: 15, text: "Language Lab" },
-      ],
+      ],}
     };
   },
 };
