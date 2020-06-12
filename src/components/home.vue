@@ -164,7 +164,7 @@ export default {
         this.count += this.optionsArray[this.course[key].credit].credit;
       }
       this.cgpa /= this.count;
-
+      this.cgpa=this.cgpa.toFixed(2);
       if (this.cgpa > 10) {
         this.flag = true;
         this.result = false;
