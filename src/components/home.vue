@@ -126,8 +126,9 @@ export default {
       flag: false,
       options: [
         { value: null, text: "Please select an option" },
-        { value: "options1", text: "CSE" },
-        { value: "options2", text: "ECE" },
+        { value: "options1", text: "Btech.CSE" },
+        { value: "options2", text: "Btech.ECE" },
+        { value: "options3", text: "Mtech.ECE" },
       ],
       course: [],
     };
