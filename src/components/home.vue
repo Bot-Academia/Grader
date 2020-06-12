@@ -129,6 +129,7 @@ export default {
         { value: "options1", text: "Btech.CSE" },
         { value: "options2", text: "Btech.ECE" },
         { value: "options3", text: "Mtech.ECE" },
+        { value: "options4", text: "Btech.Mech" },
       ],
       course: [],
     };
