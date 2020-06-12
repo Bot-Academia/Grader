@@ -90,6 +90,7 @@ export default {
 
 <style scoped>
 body {
+  font-family: "Comic Neue", cursive;
   height: 100%;
   background: linear-gradient(
     180deg,
@@ -135,6 +136,7 @@ input[type="submit"] {
   margin: 5em auto;
 }
 form {
+  font-family: "Comic Neue", cursive;
   background-color: #ffffff;
   padding-top: 40px;
   padding-right: 40px;
