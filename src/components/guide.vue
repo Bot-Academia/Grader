@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="button left" @click="openguide">Guide</div>
-    <transition name="slide">
-      <div class="guide" v-if="isguide" :class="{ guidetranslate: isguide }">
+      <div class="guide animate__animated" v-if="appearguide"  :class="{slideInLeft:isguide,slideOutLeft:notguide}">
         <h1>Guide</h1>
         <br />
         <h4>Step 1:</h4>
@@ -11,7 +10,6 @@
         <p>Add your courses with the respective grade points</p>
         <h3>Now you are ready to hit submit!😊</h3>
       </div>
-    </transition>
   </div>
 </template>
 
@@ -19,12 +17,19 @@
 export default {
   data: function () {
     return {
+      appearguide: false,
       isguide: false,
+      notguide: false
     };
   },
   methods: {
     openguide: function (event) {
+      this.appearguide=true;
       this.isguide = !this.isguide;
+      if(this.isguide===true)
+         this.notguide=false;
+      else
+          this.notguide=true;
       if (this.isguide) event.target.classList.add("button-translate");
       else event.target.classList.remove("button-translate");
     },
@@ -49,9 +54,7 @@ export default {
   border-radius: 0 100px 100px 0;
 }
 
-#title {
-  transform: rotate(-90deg);
-}
+
 
 .guide {
   color: black;
@@ -60,36 +63,20 @@ export default {
   width: 50vw;
   height: 30vh;
   z-index: 1000;
-  transition: width 1s ease;
   overflow: hidden;
   position: absolute;
   border-radius: 0 20px 20px 0;
   box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
+  transition: 1s ease;
 }
 
-.guidetranslate {
-  width: 50vw;
-}
+
 
 .button-translate {
   transform: translateX(50vw);
 }
 
-.slide-enter {
-  width: 0vw;
-}
 
-.slide-enter-active {
-  transition: 1s ease;
-}
-
-.slide-leave {
-  transition: 1s ease;
-}
-
-.slide-leave-active {
-  width: 0vw;
-}
 
 @media (max-width: 1486px) {
   .guide {
@@ -120,4 +107,37 @@ export default {
     height: 60vh;
   }
 }
+
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-50vw, 0, 0);
+  }
+}
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-50vw, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+
 </style>
