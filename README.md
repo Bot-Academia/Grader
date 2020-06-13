@@ -1,4 +1,5 @@
 # grader
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bc5081ad-8fbb-45c1-9fd5-5cac9e849350/deploy-status)](https://app.netlify.com/sites/smvdugrader/deploys)
 
 ## Project setup
 
