@@ -3,7 +3,7 @@
     <div class="button left" @click="openguide">Guide</div>
       <div class="guide animate__animated" v-if="appearguide"  :class="{slideInLeft:isguide,slideOutLeft:notguide}">
         <h1>Guide</h1>
-        <br />
+        <hr class="container">
         <h4>Step 1:</h4>
         <p>Select your branch</p>
         <h4>Step 2:</h4>
