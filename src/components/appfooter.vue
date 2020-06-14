@@ -26,7 +26,7 @@ a {
 .footer {
   font-family: "Comic Neue", cursive;
   font-size: large;
-  position: fixed;
+  position: absolute;
   width: 100%;
   bottom: 0;
   background-color: #228be6;
