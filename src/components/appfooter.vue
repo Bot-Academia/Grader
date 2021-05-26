@@ -4,8 +4,7 @@
       ><i class="fa fa-github" aria-hidden="true"></i
     ></a>
     <p>
-      Developed by <a href="https://github.com/codetheorem">Hrishikesh</a> |
-      <a href="https://github.com/vinayaksh42">Vinayak</a>
+      Developed by <a href="https://github.com/codetheorem">Hrishikesh</a>
     </p>
   </div>
 </template>
